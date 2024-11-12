@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { SearchBarProps } from "./type";
 import { TextInput, View,  } from "react-native";
 import { styles } from "./style";
-import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+import Icon from "react-native-vector-icons/FontAwesome";
 
-export const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
-  const [query, setQuery] = useState<string>("");
+
+
+export const SearchBar = ({ placeholder, onSearch, children }: SearchBarProps) => {
+const [query, setQuery] = useState<string>("");
+const seacrhIcon =  <Icon name="search" size={26} color="black" />
 
   const handleSearchChange = (text: string) => {
     setQuery(text);
@@ -14,13 +17,14 @@ export const SearchBar = ({ placeholder, onSearch }: SearchBarProps) => {
 
   return (
     <View style={styles.container}>
-    <FaBeer  size={26}/>
+      {seacrhIcon}
       <TextInput
         style={styles.input}
         placeholder={placeholder}
         value={query}
         onChangeText={handleSearchChange}
-      ></TextInput>
+        >
+      </TextInput>
     </View>
   );
 };
