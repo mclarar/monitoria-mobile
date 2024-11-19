@@ -12,4 +12,18 @@ export const styles = StyleSheet.create({
     fontSize: 50
   },
 
+  estiloModal:{
+    backgroundColor: 'black',
+    width: 500,
+    height: 500
+  },
+
+  botao:{
+    backgroundColor: 'black',
+
+  },
+
+  texto:{
+    color: 'white'
+  }
 });
