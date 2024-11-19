@@ -57,6 +57,7 @@ export const ListaDePokemon = () => {
         ListFooterComponent={
           loading ? <ActivityIndicator size="large" color="#0000ff" /> : null
         } // componente loader no final da lista
+
       />
     </View>
   );

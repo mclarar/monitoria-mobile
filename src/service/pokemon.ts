@@ -10,7 +10,7 @@ export interface Pokemon {
 
 
 interface responseGetPokemonsProps {
-  results: Pokemon[]; // Inclua 'results' com o tipo correto
+  results: Pokemon[];
 }
  
 export const getPokemons = (
